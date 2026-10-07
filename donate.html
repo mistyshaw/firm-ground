@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Firm Ground Homes: Donate</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<template id="dc-tpl">
+
+<div class="site">
+
+<div class="concept-banner"><strong>Concept site.</strong> Firm Ground Homes is a fictional organization created as a design sample.</div>
+
+<header class="site-header">
+<a href="index.html" class="site-logo">
+<svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="10" fill="#1F5C5A"/><path d="M9 18 L18 10 L27 18 M12 17v9h12v-9" fill="none" stroke="#FBF6EC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span class="site-logo__name">Firm Ground Homes</span>
+</a>
+<nav aria-label="Main" class="site-nav">
+<a href="about.html" class="site-nav__link">About</a>
+<a href="programs.html" class="site-nav__link">Programs</a>
+<a href="apply.html" class="site-nav__link">How to apply</a>
+<a href="referral.html" class="site-nav__link">For referral partners</a>
+<a href="volunteer.html" class="site-nav__link">Volunteer</a>
+<a href="faq.html" class="site-nav__link">Questions</a>
+<a href="donate.html" aria-current="page" class="site-nav__link site-nav__link--current">Donate</a>
+</nav>
+</header>
+
+<main>
+<section class="donate-hero">
+
+<div class="donate-hero__intro">
+<p class="eyebrow">Donate</p>
+<h1 class="page-title">Help someone find firm footing.</h1>
+<p class="donate-hero__lead">Every gift helps pay for housing, job support and the basics that help a neighbor get steady. Give once or every month.</p>
+<p class="donate-hero__impact">$175 covers one week of housing for one resident. (Sample figures.)</p>
+</div>
+
+<div class="donate-card">
+
+<sc-if value="{{ showConfirm }}" hint-placeholder-val="{{ false }}">
+<div role="status" class="confirmation-panel">
+<svg width="40" height="40" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#1F5C5A"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#FBF6EC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<p class="donate-card__thanks">{{ thanksText }}</p>
+<p class="donate-card__next-step">On a live site, this opens a secure checkout. No payment is taken here. (Concept site.)</p>
+<button type="button" onClick="{{ reset }}" class="button button--outline button--small">Reset the sample gift</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+<div>
+<div class="section-heading-row">
+<h2 class="card-title">Make a gift</h2>
+<span class="sample-badge">Sample figures</span>
+</div>
+
+<div class="frequency-toggle">
+<button type="button" onClick="{{ pickOnce }}" aria-pressed="{{ isOnce }}" class="frequency-toggle__option {{ onceState }}">Give once</button>
+<button type="button" onClick="{{ pickMonthly }}" aria-pressed="{{ isMonthly }}" class="frequency-toggle__option {{ monthlyState }}">Give monthly</button>
+</div>
+
+<fieldset class="amount-fieldset">
+<legend class="amount-fieldset__legend">Choose an amount</legend>
+<sc-for list="{{ options }}" as="opt" hint-placeholder-count="5">
+<button type="button" onClick="{{ opt.pick }}" aria-pressed="{{ opt.selected }}" class="amount-option {{ opt.state }}">
+<span class="amount-option__value">{{ opt.amount }}</span>
+<span class="amount-option__description">{{ opt.desc }}</span>
+<sc-if value="{{ opt.selected }}" hint-placeholder-val="{{ false }}">
+<svg width="26" height="26" viewBox="0 0 28 28" aria-hidden="true" class="icon--fixed"><circle cx="14" cy="14" r="13" fill="#1F5C5A"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#FBF6EC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</sc-if>
+</button>
+</sc-for>
+</fieldset>
+
+<sc-if value="{{ isOther }}" hint-placeholder-val="{{ false }}">
+<div class="other-amount-field">
+<label for="custom-amount" class="form-field__label">Your amount, in dollars</label>
+<input id="custom-amount" type="text" inputmode="decimal" placeholder="For example, 40" value="{{ custom }}" onChange="{{ onCustom }}" aria-invalid="{{ amountError }}" class="text-input {{ customBorder }}">
+<sc-if value="{{ amountError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" class="form-field__error">Please enter an amount of $1 or more.</p>
+</sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMonthly }}" hint-placeholder-val="{{ false }}">
+<p class="donate-card__monthly-note">Monthly gifts help us plan ahead. You can change or cancel anytime.</p>
+</sc-if>
+
+<button type="button" onClick="{{ give }}" class="button button--primary button--block">{{ giveLabel }}</button>
+<p class="form-footnote">Concept site: no payment is taken.</p>
+</div>
+</sc-if>
+</div>
+
+</section>
+
+<section class="ways-section">
+<div class="ways-section__inner">
+<div class="way-item">
+<div class="way-item__icon">
+<svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 20a12 12 0 0 1 20-8l4 4 M32 20a12 12 0 0 1-20 8l-4-4 M32 8v8h-8 M8 32v-8h8" fill="none" stroke="#1F5C5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<div>
+<h2 class="way-item__title">Once or every month</h2>
+<p class="way-item__text">Choose what fits your budget. Every amount helps.</p>
+</div>
+</div>
+<div class="way-item">
+<div class="way-item__icon">
+<svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="9" width="30" height="22" rx="3" fill="none" stroke="#1F5C5A" stroke-width="2.4" stroke-linejoin="round"/><path d="M6 12l14 11 14-11" fill="none" stroke="#1F5C5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<div>
+<h2 class="way-item__title">A receipt by email</h2>
+<p class="way-item__text">Keep it for your records and your taxes.</p>
+</div>
+</div>
+<div class="way-item">
+<div class="way-item__icon">
+<svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="#1F5C5A" stroke-width="2.4"/><path d="M20 12v9l6 3" fill="none" stroke="#1F5C5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<div>
+<h2 class="way-item__title">Change or cancel anytime</h2>
+<p class="way-item__text">Monthly gifts are never locked in.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section">
+<div class="split-layout">
+<div class="split-layout__heading">
+<p class="eyebrow">Tax information</p>
+<h2 class="split-layout__title">Is my gift tax-deductible?</h2>
+</div>
+<div class="split-layout__content">
+<p class="body-paragraph">Gifts may be tax-deductible to the extent allowed by law. After you give, we email a receipt that includes our tax ID. [Legal name and tax ID go here.]</p>
+<p class="concept-note"><strong>Concept note:</strong> <em>Client to confirm donation platform, tax status and receipt wording with their accountant or counsel.</em></p>
+</div>
+</div>
+</section>
+<section class="cross-links"><p class="cross-links__text">Prefer to give supplies? See the <a href="wishlist.html">wishlist</a>. Curious where gifts go? See our <a href="impact.html">impact and transparency</a> page.</p></section>
+</main>
+
+<footer class="site-footer">
+<div class="site-footer__inner">
+<div class="site-footer__column">
+<div class="site-footer__brand">Firm Ground Homes</div>
+<p class="site-footer__text">Steady ground while you rebuild.</p>
+</div>
+<div class="site-footer__column">
+<h2 class="site-footer__heading">Need help right now?</h2>
+<p class="site-footer__text">Call or text 988, or dial 211 for local services.</p>
+</div>
+<div class="site-footer__column">
+<h2 class="site-footer__heading">Accessibility</h2>
+<p class="site-footer__text">We build this site to meet WCAG 2.1 AA. If something is hard to use, tell us and we will fix it.</p>
+</div>
+</div>
+<p class="site-footer__disclaimer">Concept site. Firm Ground Homes is a fictional organization. All numbers, quotes and images are samples or placeholders.</p>
+</footer>
+
+</div>
+</template>
+<div id="app"></div>
+<script src="assets/dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+state = { freq: 'once', choice: 175, custom: '', tried: false, done: false };
+
+amountValue() {
+const s = this.state;
+if (s.choice === 'other') {
+const n = parseFloat(String(s.custom).replace(/[^0-9.]/g, ''));
+return isFinite(n) ? n : 0;
+}
+return s.choice;
+}
+
+renderVals() {
+const s = this.state;
+const v = this.amountValue();
+const fmt = (n) => '$' + (Math.round(n * 100) / 100).toLocaleString('en-US');
+const monthly = s.freq === 'monthly';
+const defs = [
+{ id: 25, amount: '$25', desc: 'A week of bus passes for one resident' },
+{ id: 50, amount: '$50', desc: 'Work clothes for an interview and a first week on the job' },
+{ id: 175, amount: '$175', desc: 'One week of housing for one resident' },
+{ id: 700, amount: '$700', desc: 'Four weeks of housing for one resident' },
+{ id: 'other', amount: 'Other', desc: 'Every amount helps. Your gift goes where it is needed most.' }
+];
+const amountError = s.tried && s.choice === 'other' && v < 1;
+return {
+options: defs.map((o) => {
+const sel = s.choice === o.id;
+return {
+amount: o.amount,
+desc: o.desc,
+selected: sel,
+      state: sel ? 'is-selected' : '',
+pick: () => this.setState({ choice: o.id, tried: false })
+};
+}),
+isOnce: !monthly,
+isMonthly: monthly,
+onceState: monthly ? '' : 'is-selected',
+monthlyState: monthly ? 'is-selected' : '',
+pickOnce: () => this.setState({ freq: 'once' }),
+pickMonthly: () => this.setState({ freq: 'monthly' }),
+isOther: s.choice === 'other',
+custom: s.custom,
+onCustom: (e) => this.setState({ custom: e.target.value }),
+amountError,
+customBorder: amountError ? 'is-invalid' : '',
+giveLabel: v >= 1 ? 'Give ' + fmt(v) + (monthly ? ' monthly' : ' once') : 'Give',
+give: () => {
+if (this.amountValue() >= 1) {
+this.setState({ done: true, tried: false });
+} else {
+this.setState({ tried: true });
+}
+},
+showForm: !s.done,
+showConfirm: s.done,
+thanksText: 'Thank you for choosing to give ' + fmt(v) + (monthly ? ' every month.' : ' once.'),
+reset: () => this.setState({ done: false, tried: false })
+};
+}
+}
+DC.mount(Component);
+</script>
+<noscript><p class="noscript-message">This sample form needs JavaScript.</p></noscript>
+</body>
+</html>

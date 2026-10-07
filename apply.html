@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Firm Ground Homes: How to Apply</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<template id="dc-tpl">
+
+<div class="site">
+
+<div class="concept-banner"><strong>Concept site.</strong> Firm Ground Homes is a fictional organization created as a design sample.</div>
+
+<header class="site-header">
+<a href="index.html" class="site-logo">
+<svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="10" fill="#1F5C5A"/><path d="M9 18 L18 10 L27 18 M12 17v9h12v-9" fill="none" stroke="#FBF6EC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span class="site-logo__name">Firm Ground Homes</span>
+</a>
+<nav aria-label="Main" class="site-nav">
+<a href="about.html" class="site-nav__link">About</a>
+<a href="programs.html" class="site-nav__link">Programs</a>
+<a href="apply.html" aria-current="page" class="site-nav__link site-nav__link--current">How to apply</a>
+<a href="referral.html" class="site-nav__link">For referral partners</a>
+<a href="volunteer.html" class="site-nav__link">Volunteer</a>
+<a href="faq.html" class="site-nav__link">Questions</a>
+<a href="donate.html" class="site-nav__link">Donate</a>
+</nav>
+</header>
+
+<main>
+<section class="page-hero">
+<p class="eyebrow">Apply</p>
+<h1 class="page-title">How to apply</h1>
+<p class="page-lead">Applying takes about 10 minutes. You do not need a perfect story or every document today. Start the form, and we will help with the rest.</p>
+<a href="#form" class="button button--primary button--wide">Start the form</a>
+</section>
+
+<section class="band-section">
+<div class="container">
+<p class="eyebrow">The process</p>
+<h2 class="section-title">Four steps</h2>
+<div class="card-grid">
+<div class="value-card">
+<div class="step-number">1</div>
+<h3 class="card-heading">Send the short form</h3>
+<p class="card-text">Tell us how to reach you and a little about your work situation.</p>
+</div>
+<div class="value-card">
+<div class="step-number">2</div>
+<h3 class="card-heading">We call you</h3>
+<p class="card-text">A staff member phones within 3 business days to answer questions and talk through screening.</p>
+</div>
+<div class="value-card">
+<div class="step-number">3</div>
+<h3 class="card-heading">Meet us</h3>
+<p class="card-text">A short interview and a tour of the home, in person or by video.</p>
+</div>
+<div class="value-card">
+<div class="step-number">4</div>
+<h3 class="card-heading">Decision and move-in</h3>
+<p class="card-text">We let you know within 5 business days. If it is a yes, you sign the house agreement, pay the deposit and pick a move-in day.</p>
+</div>
+</div>
+<p class="steps-footnote">If our homes are full, we add you to the waitlist and tell you where you stand.</p>
+</div>
+</section>
+
+<section class="page-section">
+<div class="interview-prep">
+
+<div class="content-column">
+<h2 class="subsection-title">What to bring to the interview</h2>
+<ul class="checklist">
+<li class="checklist__item">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="icon--check"><circle cx="14" cy="14" r="13" fill="#E3EEEA" stroke="#1F5C5A" stroke-width="2"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#1F5C5A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>Photo ID</span>
+</li>
+<li class="checklist__item">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="icon--check"><circle cx="14" cy="14" r="13" fill="#E3EEEA" stroke="#1F5C5A" stroke-width="2"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#1F5C5A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>Proof of income, a job offer letter, or a list of your job search steps</span>
+</li>
+<li class="checklist__item">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="icon--check"><circle cx="14" cy="14" r="13" fill="#E3EEEA" stroke="#1F5C5A" stroke-width="2"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#1F5C5A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>A referral letter, if someone referred you (optional)</span>
+</li>
+<li class="checklist__item--flush">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="icon--check"><circle cx="14" cy="14" r="13" fill="#E3EEEA" stroke="#1F5C5A" stroke-width="2"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#1F5C5A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>One emergency contact</span>
+</li>
+</ul>
+<p class="emphasis-text">Don't have everything? Apply anyway. We will help you gather what is missing.</p>
+</div>
+
+<div id="form" class="form-card">
+<h2 class="form-card__title">Inquiry form</h2>
+<p class="form-card__intro">Fewer fields means fewer barriers, so the form stays short.</p>
+
+<sc-if value="{{ showConfirm }}" hint-placeholder-val="{{ false }}">
+<div role="status" class="confirmation-panel">
+<svg width="40" height="40" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#1F5C5A"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#FBF6EC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<p class="confirmation-panel__message">Thank you, {{ confirmName }}. We received your application. Expect a call within 3 business days from (555) 010-0142. (Sample number.)</p>
+<button type="button" onClick="{{ reset }}" class="button button--outline button--small">Reset the sample form</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit }}">
+
+<div class="form-field">
+<label for="first-name" class="form-field__label">First name <span class="form-field__hint">(required)</span></label>
+<input id="first-name" type="text" autocomplete="given-name" value="{{ firstName }}" onChange="{{ onFirstName }}" aria-invalid="{{ nameError }}" class="text-input {{ nameBorder }}">
+<sc-if value="{{ nameError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" class="form-field__error">Please add your first name so we know what to call you.</p>
+</sc-if>
+</div>
+
+<div class="form-field">
+<label for="phone" class="form-field__label">Phone number <span class="form-field__hint">(required)</span></label>
+<input id="phone" type="tel" autocomplete="tel" value="{{ phone }}" onChange="{{ onPhone }}" aria-invalid="{{ phoneError }}" class="text-input {{ phoneBorder }}">
+<sc-if value="{{ phoneError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" class="form-field__error">Please add a phone number so we can reach you.</p>
+</sc-if>
+</div>
+
+<div class="form-field">
+<label for="email" class="form-field__label">Email <span class="form-field__hint">(optional)</span></label>
+<input id="email" type="email" autocomplete="email" value="{{ email }}" onChange="{{ onEmail }}" class="text-input">
+</div>
+
+<div class="form-field">
+<label for="call-time" class="form-field__label">Best time to call <span class="form-field__hint">(optional)</span></label>
+<select id="call-time" value="{{ callTime }}" onChange="{{ onCallTime }}" class="select-input">
+<option value="">Choose a time</option>
+<option value="Morning">Morning</option>
+<option value="Afternoon">Afternoon</option>
+<option value="Evening">Evening</option>
+</select>
+</div>
+
+<div class="form-field">
+<label for="work" class="form-field__label">Your work situation <span class="form-field__hint">(required)</span></label>
+<select id="work" value="{{ work }}" onChange="{{ onWork }}" aria-invalid="{{ workError }}" class="select-input {{ workBorder }}">
+<option value="">Choose one</option>
+<option value="Working">Working</option>
+<option value="Looking for work">Looking for work</option>
+<option value="Something else">Something else</option>
+</select>
+<sc-if value="{{ workError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" class="form-field__error">Please choose the option that fits best.</p>
+</sc-if>
+</div>
+
+<div class="form-field">
+<label for="note" class="form-field__label">Anything you want us to know <span class="form-field__hint">(optional)</span></label>
+<textarea id="note" rows="4" value="{{ note }}" onChange="{{ onNote }}" class="textarea-input"></textarea>
+</div>
+
+<div class="form-field">
+<div class="checklist__item--flush">
+<input id="consent" type="checkbox" checked="{{ consent }}" onChange="{{ onConsent }}" aria-invalid="{{ consentError }}" class="consent-checkbox">
+<label for="consent" class="consent-label">Permission to contact me by phone, text or email <span class="form-field__hint">(required)</span></label>
+</div>
+<sc-if value="{{ consentError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" class="form-field__error">Please check the box so we can contact you.</p>
+</sc-if>
+</div>
+
+<p class="form-info-note">We do not ask about your background here. We talk about it with you by phone. We never share your information. Share only what you are comfortable putting in writing.</p>
+
+<button type="submit" class="button button--primary button--wide">Send my application</button>
+<p class="form-footnote">Concept site: nothing typed here is sent or saved.</p>
+</form>
+</sc-if>
+</div>
+
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="site-footer__inner">
+<div class="site-footer__column">
+<div class="site-footer__brand">Firm Ground Homes</div>
+<p class="site-footer__text">Steady ground while you rebuild.</p>
+</div>
+<div class="site-footer__column">
+<h2 class="site-footer__heading">Need help right now?</h2>
+<p class="site-footer__text">Call or text 988, or dial 211 for local services.</p>
+</div>
+<div class="site-footer__column">
+<h2 class="site-footer__heading">Accessibility</h2>
+<p class="site-footer__text">We build this site to meet WCAG 2.1 AA. If something is hard to use, tell us and we will fix it.</p>
+</div>
+</div>
+<p class="site-footer__disclaimer">Concept site. Firm Ground Homes is a fictional organization. All numbers, quotes and images are samples or placeholders.</p>
+</footer>
+
+</div>
+</template>
+<div id="app"></div>
+<script src="assets/dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+state = { firstName: '', phone: '', email: '', callTime: '', work: '', note: '', consent: false, tried: false, done: false, doneName: '' };
+
+renderVals() {
+const s = this.state;
+const phoneOk = s.phone.replace(/\D/g, '').length >= 7;
+const nameError = s.tried && !s.firstName.trim();
+const phoneError = s.tried && !phoneOk;
+const workError = s.tried && !s.work;
+const consentError = s.tried && !s.consent;
+const ok = '#8F8575';
+const bad = '#A8481F';
+return {
+firstName: s.firstName,
+phone: s.phone,
+email: s.email,
+callTime: s.callTime,
+work: s.work,
+note: s.note,
+consent: s.consent,
+nameError, phoneError, workError, consentError,
+nameBorder: nameError ? 'is-invalid' : '',
+phoneBorder: phoneError ? 'is-invalid' : '',
+workBorder: workError ? 'is-invalid' : '',
+showForm: !s.done,
+showConfirm: s.done,
+confirmName: s.doneName,
+onFirstName: (e) => this.setState({ firstName: e.target.value }),
+onPhone: (e) => this.setState({ phone: e.target.value }),
+onEmail: (e) => this.setState({ email: e.target.value }),
+onCallTime: (e) => this.setState({ callTime: e.target.value }),
+onWork: (e) => this.setState({ work: e.target.value }),
+onNote: (e) => this.setState({ note: e.target.value }),
+onConsent: (e) => this.setState({ consent: e.target.checked }),
+submit: (e) => {
+if (e && e.preventDefault) e.preventDefault();
+const c = this.state;
+const valid = c.firstName.trim() && c.phone.replace(/\D/g, '').length >= 7 && c.work && c.consent;
+if (valid) {
+this.setState({ tried: true, done: true, doneName: c.firstName.trim() });
+} else {
+this.setState({ tried: true });
+}
+},
+reset: () => this.setState({ firstName: '', phone: '', email: '', callTime: '', work: '', note: '', consent: false, tried: false, done: false, doneName: '' })
+};
+}
+}
+DC.mount(Component);
+</script>
+<noscript><p class="noscript-message">This sample form needs JavaScript.</p></noscript>
+</body>
+</html>
