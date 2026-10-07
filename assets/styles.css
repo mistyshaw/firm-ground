@@ -968,9 +968,16 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
 }
 
 .home-hero {
+  padding: 40px 0 15%;
+  background-image: url("images/home-01.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.home-hero__inner {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 40px 24px 72px;
+  padding: 0 24px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
