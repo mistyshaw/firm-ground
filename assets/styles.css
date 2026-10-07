@@ -136,7 +136,7 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--color-cream);
 }
 
 .page-title {
@@ -969,7 +969,9 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
 
 .home-hero {
   padding: 40px 0 15%;
-  background-image: url("images/home-01.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(19, 66, 64, 0.9) 0%, rgba(19, 66, 64, 0.72) 45%, rgba(19, 66, 64, 0) 80%),
+    url("images/home-01-flip.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -985,8 +987,12 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
 }
 
 .home-hero__copy {
-  flex: 1 1 420px;
+  flex: 0 1 60%;
   min-width: 0;
+}
+
+.home-hero .page-lead {
+  color: var(--color-cream);
 }
 
 .home-hero__title {
@@ -995,7 +1001,7 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   font-weight: 700;
   font-size: clamp(40px, 6vw, 64px);
   line-height: 1.08;
-  color: var(--color-teal);
+  color: var(--color-cream);
 }
 
 .home-hero__illustration {
@@ -1010,6 +1016,12 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   font-size: 14px;
   line-height: 1.4;
   color: var(--color-muted);
+}
+
+@media (max-width: 640px) {
+  .home-hero__copy {
+    flex-basis: 100%;
+  }
 }
 
 .feature-row {
