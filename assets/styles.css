@@ -136,7 +136,7 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-cream);
+  color: var(--color-clay);
 }
 
 .page-title {
