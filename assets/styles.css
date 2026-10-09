@@ -952,6 +952,24 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
 }
 
 /* Home */
+.step-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.program-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
 .step-number {
   width: 44px;
   height: 44px;
