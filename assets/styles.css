@@ -289,7 +289,7 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   padding: 48px 24px 56px;
 }
 
-.page-hero--apply {
+.page-hero--with-image {
   max-width: none;
   padding: 48px max(24px, calc((100% - var(--content-width)) / 2)) 56px;
   background-image:
