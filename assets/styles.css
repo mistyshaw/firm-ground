@@ -806,6 +806,16 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   gap: 40px 56px;
 }
 
+.about-hero--with-image {
+  max-width: none;
+  padding: 48px max(24px, calc((100% - var(--content-width)) / 2)) 64px;
+  background-image:
+    linear-gradient(rgba(251, 246, 236, 0.82), rgba(251, 246, 236, 0.82)),
+    url("images/common-hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 .about-hero__text {
   flex: 1 1 400px;
   min-width: 0;
