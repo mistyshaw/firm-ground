@@ -289,6 +289,16 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   padding: 48px 24px 56px;
 }
 
+.page-hero--apply {
+  max-width: none;
+  padding: 48px max(24px, calc((100% - var(--content-width)) / 2)) 56px;
+  background-image:
+    linear-gradient(rgba(251, 246, 236, 0.82), rgba(251, 246, 236, 0.82)),
+    url("images/common-hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 .page-lead {
   margin: 0 0 32px;
   max-width: 34em;
