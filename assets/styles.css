@@ -201,6 +201,26 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
   padding: 28px;
 }
 
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-values__card--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.about-values__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .icon-tile {
   width: 56px;
   height: 56px;
@@ -1059,6 +1079,10 @@ details[open] .faq-item__chevron { transform: rotate(180deg); }
 @media (max-width: 640px) {
   .home-hero__copy {
     flex-basis: 100%;
+  }
+
+  .about-values__grid {
+    grid-template-columns: 1fr;
   }
 }
 
