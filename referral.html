@@ -20,7 +20,11 @@
 <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="10" fill="#1F5C5A"/><path d="M9 18 L18 10 L27 18 M12 17v9h12v-9" fill="none" stroke="#FBF6EC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <span class="site-logo__name">Firm Ground Homes</span>
 </a>
-<nav aria-label="Main" class="site-nav">
+<button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+<span class="site-nav__toggle-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Menu</span>
+</button>
+<nav id="site-nav" aria-label="Main" class="site-nav">
 <a href="about.html" class="site-nav__link">About</a>
 <a href="programs.html" class="site-nav__link">Programs</a>
 <a href="apply.html" class="site-nav__link">How to apply</a>
@@ -346,5 +350,6 @@ reset: () => this.setState({ yourName: '', agency: '', email: '', phone: '', per
 DC.mount(Component);
 </script>
 <noscript><p class="noscript-message">This sample form needs JavaScript.</p></noscript>
+<script src="assets/site-nav.js"></script>
 </body>
 </html>
