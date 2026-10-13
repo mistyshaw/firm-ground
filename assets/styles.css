@@ -9,8 +9,10 @@
   --color-border: #E6D9BF;
   --color-teal: #1F5C5A;
   --color-teal-dark: #134240;
-  --color-clay: #A8481F;
-  --color-clay-dark: #8C3A15;
+  /* --color-clay: #A8481F; */
+  /* --color-clay-dark: #8C3A15; */
+  --color-clay: #9A2050; /* --will rename clay to rose */
+  --color-clay-dark: #771839; /* --will rename clay-dark to rose-dark */
   --color-charcoal: #2B2A28;
   --color-mint: #E3EEEA;
   --color-gold: #F4C46B;
